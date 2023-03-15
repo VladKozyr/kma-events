@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from 'redux-persist/integration/react'
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import configureStore from "./state/store";
+import MenuComponentAuth from "./hocs/menuAuth"
 const {store, persistor} = configureStore()
 
 export default function App(){
@@ -12,6 +13,7 @@ export default function App(){
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
+          <MenuComponentAuth/>
           <Routes>
             <Route exact path='/' element={<div>a</div>}/>
             <Route path='/a' element={<div>b</div>}/>
