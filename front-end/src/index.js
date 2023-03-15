@@ -1,8 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from "react-redux";
+import { PersistGate } from 'redux-persist/integration/react'
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import configureStore from "./state/store";
+const {store, persistor} = configureStore()
+
+export default function App(){
+  return(
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path='/' element={<div>a</div>}/>
+            <Route path='/a' element={<div>b</div>}/>
+          </Routes>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,8 +28,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
