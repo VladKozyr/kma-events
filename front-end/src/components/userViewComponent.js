@@ -14,6 +14,7 @@ function UserViewComponent({selectedUser}){
         <>
             <div>{currentUser.email}</div>
             <Button onClick={toTable}>Назад</Button>
+            <Button onClick={toTable}>Зробити адміном</Button>
         </>
     )
 }
