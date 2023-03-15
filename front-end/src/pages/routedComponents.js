@@ -3,7 +3,7 @@ import onLoginBetweenComponents from '../hocs/betweenComponentsOnLogin'
 import { LoginForm } from '../components/loginFormComponent'
 import { LogoutForm } from '../components/logoutFormComponent'
 import { MainPage } from './mainPage'
-import userRouted from './usersPage'
+import userRouted from '../hocs/usersPage'
 
 const LoginWithoutAuth = onLoginBetweenComponents(MainPage, LoginForm)
 const UsersPageAuth = userRouted()
