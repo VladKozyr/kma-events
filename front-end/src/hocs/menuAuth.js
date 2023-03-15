@@ -9,7 +9,7 @@ import {MenuFoldOutlined,LoginOutlined, LogoutOutlined, AppstoreOutlined,
 let menuSetupNotAuth = [
     {
         image: <LoginOutlined />,
-        name: "Login",
+        name: "Авторизація",
         link: "/"
     }
 ]
@@ -17,62 +17,27 @@ let menuSetupNotAuth = [
 let menuSetupAuth = [
     {
         image: <MenuFoldOutlined />,
-        name: "General",
+        name: "Профіль",
         link: "/"
     },
     {
         image: <AppstoreOutlined />,
-        name: "Storages",
-        link: "/storages"
+        name: "Користувачі",
+        link: "/users"
     },
     {
-        image: <UnorderedListOutlined />,
-        name: "Categories",
-        link: "/categories"
+        image: <AppstoreOutlined />,
+        name: "Приміщення",
+        link: "/rooms"
     },
     {
-        image: <ProfileOutlined />,
-        name: "Products",
-        link: "/products"
-    },
-    {
-        image: <ContainerOutlined />,
-        name: "Tech card categories",
-        link: "/techcard/categories"
-    },
-    {
-        image: <DatabaseOutlined />,
-        name: "Tech cards",
-        link: "/techcard"
-    },
-    {
-        image: <ShopOutlined />,
-        name: "Providers",
-        link: "/providers"
-    },
-    {
-        image: <HistoryOutlined />,
-        name: "Storage operations",
-        link: "/storages/operations"
-    },
-    {
-        image: <UserOutlined />,
-        name: "Clients",
-        link: "/clients"
-    },
-    {
-        image: <CreditCardOutlined />,
-        name: "Discounts",
-        link: "/discounts"
-    },
-    {
-        image: <GiftOutlined />,
-        name: "Orders",
-        link: "/orders"
+        image: <AppstoreOutlined />,
+        name: "Запити",
+        link: "/requests"
     },
     {
         image: <LogoutOutlined />,
-        name: "Logout",
+        name: "Вийти",
         link: "/logout"
     }
 ]
