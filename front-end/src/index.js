@@ -6,8 +6,9 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import configureStore from "./state/store";
 import MenuComponentAuth from "./hocs/menuAuth"
-import { MainPage, LogoutPage } from './pages/routedComponents';
+import { MainPage, LogoutPage, UsersPage } from './pages/routedComponents';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import TableComponent from './components/userTableComponent';
 const { Header, Content, Footer } = Layout;
 const {store, persistor} = configureStore()
 
@@ -23,7 +24,7 @@ export default function App(){
                 <Routes>
                   <Route exact path='/' element={<MainPage/>}/>
                   <Route exact path="/logout" element={<LogoutPage/>} />
-                  <Route path='/a' element={<div>b</div>}/>
+                  <Route path='/users' element={<UsersPage/>}/>
                 </Routes>
               </div>
             </Content>
